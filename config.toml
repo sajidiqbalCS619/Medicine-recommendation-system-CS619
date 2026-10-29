@@ -1,0 +1,8 @@
+[server]
+maxUploadSize = 50          # MB - SRS UC-06 exception: uploads over 50MB are rejected
+
+[browser]
+gatherUsageStats = false    # no e-mail / telemetry prompt on first run
+
+[theme]
+primaryColor = "#0F766E"
