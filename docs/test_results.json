@@ -1,0 +1,306 @@
+{
+  "cases": [
+    {
+      "id": "TC-01a",
+      "uc": "UC-01",
+      "scenario": "Register with a valid, unique email",
+      "tests": [
+        "test_TC_01a_register_valid_unique_email",
+        "test_TC_01a_ui_register_redirects_to_login_with_success_message"
+      ],
+      "status": "Pass"
+    },
+    {
+      "id": "TC-01b",
+      "uc": "UC-01",
+      "scenario": "Register with an already-used email",
+      "tests": [
+        "test_TC_01b_register_duplicate_email"
+      ],
+      "status": "Pass"
+    },
+    {
+      "id": "TC-02a",
+      "uc": "UC-02",
+      "scenario": "Login with correct credentials",
+      "tests": [
+        "test_TC_02a_login_correct_credentials",
+        "test_TC_02a_ui_login_goes_to_dashboard"
+      ],
+      "status": "Pass"
+    },
+    {
+      "id": "TC-02b",
+      "uc": "UC-02",
+      "scenario": "Login with repeated incorrect password",
+      "tests": [
+        "test_TC_02b_five_wrong_passwords_lock_account"
+      ],
+      "status": "Pass"
+    },
+    {
+      "id": "TC-03a",
+      "uc": "UC-03",
+      "scenario": "Get recommendations from valid symptoms",
+      "tests": [
+        "test_TC_03a_srs_example_input_returns_full_bundle",
+        "test_TC_03a_specific_symptoms_reach_50_percent"
+      ],
+      "status": "Pass"
+    },
+    {
+      "id": "TC-03b",
+      "uc": "UC-03",
+      "scenario": "Low-confidence prediction",
+      "tests": [
+        "test_TC_03b_low_confidence_warning_and_results_still_shown",
+        "test_TC_03b_ui_warning_is_shown_in_chat"
+      ],
+      "status": "Pass"
+    },
+    {
+      "id": "TC-04a",
+      "uc": "UC-04",
+      "scenario": "View history with prior queries",
+      "tests": [
+        "test_TC_04a_history_lists_prior_queries"
+      ],
+      "status": "Pass"
+    },
+    {
+      "id": "TC-04b",
+      "uc": "UC-04",
+      "scenario": "View history with no prior queries",
+      "tests": [
+        "test_TC_04b_history_empty_message"
+      ],
+      "status": "Pass"
+    },
+    {
+      "id": "TC-05a",
+      "uc": "UC-05",
+      "scenario": "Submit valid feedback",
+      "tests": [
+        "test_TC_05a_feedback_saved_with_thank_you"
+      ],
+      "status": "Pass"
+    },
+    {
+      "id": "TC-05b",
+      "uc": "UC-05",
+      "scenario": "Close feedback form without submitting",
+      "tests": [
+        "test_TC_05b_closing_the_form_creates_no_feedback"
+      ],
+      "status": "Pass"
+    },
+    {
+      "id": "TC-06a",
+      "uc": "UC-06",
+      "scenario": "Upload a valid dataset",
+      "tests": [
+        "test_TC_06a_valid_dataset_stored_with_summary"
+      ],
+      "status": "Pass"
+    },
+    {
+      "id": "TC-06b",
+      "uc": "UC-06",
+      "scenario": "Upload an invalid dataset",
+      "tests": [
+        "test_TC_06b_invalid_dataset_rejected"
+      ],
+      "status": "Pass"
+    },
+    {
+      "id": "TC-07a",
+      "uc": "UC-07",
+      "scenario": "Retrain and deploy an improved model",
+      "tests": [
+        "test_TC_07a_retrain_better_model_is_deployed_and_old_archived"
+      ],
+      "status": "Pass"
+    },
+    {
+      "id": "TC-07b",
+      "uc": "UC-07",
+      "scenario": "Retrain yields a lower-accuracy model",
+      "tests": [
+        "test_TC_07b_retrain_lower_accuracy_warns_and_keeps_current"
+      ],
+      "status": "Pass"
+    }
+  ],
+  "all": [
+    {
+      "name": "test_TC_01a_register_valid_unique_email",
+      "status": "Pass",
+      "seconds": 0.338
+    },
+    {
+      "name": "test_TC_01a_ui_register_redirects_to_login_with_success_message",
+      "status": "Pass",
+      "seconds": 0.366
+    },
+    {
+      "name": "test_TC_01b_register_duplicate_email",
+      "status": "Pass",
+      "seconds": 0.047
+    },
+    {
+      "name": "test_UC01_validation_rules",
+      "status": "Pass",
+      "seconds": 0.0
+    },
+    {
+      "name": "test_TC_02a_login_correct_credentials",
+      "status": "Pass",
+      "seconds": 0.109
+    },
+    {
+      "name": "test_TC_02a_ui_login_goes_to_dashboard",
+      "status": "Pass",
+      "seconds": 0.336
+    },
+    {
+      "name": "test_TC_02b_five_wrong_passwords_lock_account",
+      "status": "Pass",
+      "seconds": 0.408
+    },
+    {
+      "name": "test_TC_03a_srs_example_input_returns_full_bundle",
+      "status": "Pass",
+      "seconds": 0.208
+    },
+    {
+      "name": "test_TC_03a_specific_symptoms_reach_50_percent",
+      "status": "Pass",
+      "seconds": 0.043
+    },
+    {
+      "name": "test_TC_03b_low_confidence_warning_and_results_still_shown",
+      "status": "Pass",
+      "seconds": 0.061
+    },
+    {
+      "name": "test_TC_03b_ui_warning_is_shown_in_chat",
+      "status": "Pass",
+      "seconds": 0.422
+    },
+    {
+      "name": "test_UC03_no_symptom_is_rejected_politely",
+      "status": "Pass",
+      "seconds": 0.002
+    },
+    {
+      "name": "test_UC03_exception_model_unavailable",
+      "status": "Pass",
+      "seconds": 0.004
+    },
+    {
+      "name": "test_UC03_age_gender_allergy_read_from_the_sentence",
+      "status": "Pass",
+      "seconds": 0.038
+    },
+    {
+      "name": "test_UC03_allergy_map_penicillin_flags_antibiotics",
+      "status": "Pass",
+      "seconds": 0.0
+    },
+    {
+      "name": "test_UC03_child_and_pregnancy_cautions",
+      "status": "Pass",
+      "seconds": 0.096
+    },
+    {
+      "name": "test_UC03_prescription_flag_and_dosage_note_never_contain_numbers",
+      "status": "Pass",
+      "seconds": 0.027
+    },
+    {
+      "name": "test_TC_04a_history_lists_prior_queries",
+      "status": "Pass",
+      "seconds": 0.47
+    },
+    {
+      "name": "test_TC_04b_history_empty_message",
+      "status": "Pass",
+      "seconds": 0.344
+    },
+    {
+      "name": "test_TC_05a_feedback_saved_with_thank_you",
+      "status": "Pass",
+      "seconds": 0.438
+    },
+    {
+      "name": "test_TC_05b_closing_the_form_creates_no_feedback",
+      "status": "Pass",
+      "seconds": 0.411
+    },
+    {
+      "name": "test_UC05_rating_must_be_1_to_5",
+      "status": "Pass",
+      "seconds": 0.049
+    },
+    {
+      "name": "test_TC_06a_valid_dataset_stored_with_summary",
+      "status": "Pass",
+      "seconds": 0.168
+    },
+    {
+      "name": "test_TC_06b_invalid_dataset_rejected",
+      "status": "Pass",
+      "seconds": 0.096
+    },
+    {
+      "name": "test_UC06_exception_file_over_50mb",
+      "status": "Pass",
+      "seconds": 0.018
+    },
+    {
+      "name": "test_UC06_json_dataset_accepted",
+      "status": "Pass",
+      "seconds": 0.063
+    },
+    {
+      "name": "test_TC_07a_retrain_better_model_is_deployed_and_old_archived",
+      "status": "Pass",
+      "seconds": 50.714
+    },
+    {
+      "name": "test_TC_07b_retrain_lower_accuracy_warns_and_keeps_current",
+      "status": "Pass",
+      "seconds": 47.983
+    },
+    {
+      "name": "test_UC07_exception_training_crash_keeps_previous_model",
+      "status": "Pass",
+      "seconds": 0.058
+    },
+    {
+      "name": "test_NFR04_sensitive_fields_are_encrypted_at_rest",
+      "status": "Pass",
+      "seconds": 0.046
+    },
+    {
+      "name": "test_NFR04_aes256_key_and_roundtrip",
+      "status": "Pass",
+      "seconds": 0.001
+    },
+    {
+      "name": "test_NFR08_production_model_accuracy_at_least_85_percent",
+      "status": "Pass",
+      "seconds": 0.083
+    },
+    {
+      "name": "test_NFR09_consent_required_and_recorded",
+      "status": "Pass",
+      "seconds": 0.001
+    },
+    {
+      "name": "test_NFR_response_time_under_3_seconds",
+      "status": "Pass",
+      "seconds": 0.071
+    }
+  ]
+}

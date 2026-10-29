@@ -1,0 +1,8 @@
+Model,Accuracy,Precision,Recall,F1,Acc@2 symptoms,Acc@3 symptoms,Acc@4 symptoms,Train acc,Overfit gap,CV acc (mean),CV acc (std),CV acc@3 (mean),Train sec,Selected
+"Baseline RF (prototype settings, no augmentation)",1.0,1.0,1.0,1.0,0.5377,0.6852,0.818,1.0,0.0,,,,,
+Random Forest,1.0,1.0,1.0,1.0,0.7295,0.8705,0.9393,1.0,0.0,1.0,0.0,0.9077,17.64,yes
+Decision Tree,1.0,1.0,1.0,1.0,0.7,0.8148,0.8656,1.0,0.0,1.0,0.0,0.8518,4.08,
+SVM,1.0,1.0,1.0,1.0,0.7574,0.8705,0.9492,1.0,0.0,1.0,0.0,0.8979,13.74,
+Neural Network (MLP),1.0,1.0,1.0,1.0,0.7525,0.8951,0.9623,1.0,0.0,1.0,0.0,0.9145,118.92,
+XGBoost,1.0,1.0,1.0,1.0,0.723,0.8475,0.9311,1.0,0.0,1.0,0.0,0.9011,115.24,
+Deep Neural Network (Keras),0.9836,0.9891,0.9836,0.9825,0.7623,0.8902,0.9607,,,1.0,0.0,0.9407,6.8,

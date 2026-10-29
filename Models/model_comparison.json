@@ -1,0 +1,180 @@
+{
+  "settings": {
+    "tuned": true,
+    "augmented": true,
+    "n_aug": 30
+  },
+  "split": {
+    "train_rows": 243,
+    "test_rows": 61,
+    "augmented_train_rows": 7533
+  },
+  "cleaning_report": {
+    "rows_in": 4920,
+    "cols_in": 133,
+    "unnamed_columns_dropped": 0,
+    "missing_values_filled": 0,
+    "empty_symptom_columns_dropped": 1,
+    "duplicates_removed": 4616,
+    "rows_out": 304,
+    "n_symptoms": 131,
+    "n_diseases": 41,
+    "min_rows_per_disease": 5,
+    "max_rows_per_disease": 10,
+    "avg_symptoms_per_row": 7.65
+  },
+  "selected": "Random Forest",
+  "saved_bundle": "Models/versions/model_v2_random_forest.pkl",
+  "baseline_prototype_rf": {
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "f1_macro": 1.0,
+    "acc_2_symptoms": 0.537704918032787,
+    "acc_3_symptoms": 0.6852459016393443,
+    "acc_4_symptoms": 0.8180327868852458
+  },
+  "models": {
+    "Random Forest": {
+      "best_params": {
+        "max_depth": null,
+        "min_samples_leaf": 2,
+        "n_estimators": 200
+      },
+      "tuning_score": 0.9424180327868852,
+      "train_accuracy": 1.0,
+      "overfit_gap": 0.0,
+      "train_seconds": 17.64,
+      "robust_cv_score": 0.9538524590163935,
+      "test_accuracy": 1.0,
+      "test_precision": 1.0,
+      "test_recall": 1.0,
+      "test_f1": 1.0,
+      "test_f1_macro": 1.0,
+      "test_acc_2_symptoms": 0.7295081967213115,
+      "test_acc_3_symptoms": 0.8704918032786886,
+      "test_acc_4_symptoms": 0.939344262295082,
+      "cv_folds": 5,
+      "cv_accuracy_mean": 1.0,
+      "cv_accuracy_std": 0.0,
+      "cv_acc_3_symptoms_mean": 0.9077049180327869,
+      "cv_acc_3_symptoms_std": 0.031309329597745364
+    },
+    "Decision Tree": {
+      "best_params": {
+        "criterion": "gini",
+        "max_depth": null,
+        "min_samples_leaf": 1
+      },
+      "tuning_score": 0.9011953551912568,
+      "train_accuracy": 1.0,
+      "overfit_gap": 0.0,
+      "train_seconds": 4.08,
+      "robust_cv_score": 0.9259016393442623,
+      "test_accuracy": 1.0,
+      "test_precision": 1.0,
+      "test_recall": 1.0,
+      "test_f1": 1.0,
+      "test_f1_macro": 1.0,
+      "test_acc_2_symptoms": 0.7,
+      "test_acc_3_symptoms": 0.8147540983606557,
+      "test_acc_4_symptoms": 0.8655737704918032,
+      "cv_folds": 5,
+      "cv_accuracy_mean": 1.0,
+      "cv_accuracy_std": 0.0,
+      "cv_acc_3_symptoms_mean": 0.8518032786885247,
+      "cv_acc_3_symptoms_std": 0.026668458239557682
+    },
+    "SVM": {
+      "best_params": {
+        "C": 1,
+        "gamma": "scale"
+      },
+      "tuning_score": 0.9444330601092896,
+      "train_accuracy": 1.0,
+      "overfit_gap": 0.0,
+      "train_seconds": 13.74,
+      "robust_cv_score": 0.9489617486338797,
+      "test_accuracy": 1.0,
+      "test_precision": 1.0,
+      "test_recall": 1.0,
+      "test_f1": 1.0,
+      "test_f1_macro": 1.0,
+      "test_acc_2_symptoms": 0.7573770491803278,
+      "test_acc_3_symptoms": 0.8704918032786886,
+      "test_acc_4_symptoms": 0.9491803278688525,
+      "cv_folds": 5,
+      "cv_accuracy_mean": 1.0,
+      "cv_accuracy_std": 0.0,
+      "cv_acc_3_symptoms_mean": 0.8979234972677596,
+      "cv_acc_3_symptoms_std": 0.024638446830097242
+    },
+    "Neural Network (MLP)": {
+      "best_params": {
+        "alpha": 0.0001,
+        "hidden_layer_sizes": [
+          128
+        ]
+      },
+      "tuning_score": 0.9526297814207649,
+      "train_accuracy": 1.0,
+      "overfit_gap": 0.0,
+      "train_seconds": 118.92,
+      "robust_cv_score": 0.95724043715847,
+      "test_accuracy": 1.0,
+      "test_precision": 1.0,
+      "test_recall": 1.0,
+      "test_f1": 1.0,
+      "test_f1_macro": 1.0,
+      "test_acc_2_symptoms": 0.7524590163934427,
+      "test_acc_3_symptoms": 0.8950819672131148,
+      "test_acc_4_symptoms": 0.962295081967213,
+      "cv_folds": 5,
+      "cv_accuracy_mean": 1.0,
+      "cv_accuracy_std": 0.0,
+      "cv_acc_3_symptoms_mean": 0.9144808743169399,
+      "cv_acc_3_symptoms_std": 0.019078787158574983
+    },
+    "XGBoost": {
+      "best_params": {
+        "learning_rate": 0.1,
+        "max_depth": 6,
+        "n_estimators": 100
+      },
+      "tuning_score": 0.9424180327868852,
+      "train_accuracy": 1.0,
+      "overfit_gap": 0.0,
+      "train_seconds": 115.24,
+      "robust_cv_score": 0.9505737704918032,
+      "test_accuracy": 1.0,
+      "test_precision": 1.0,
+      "test_recall": 1.0,
+      "test_f1": 1.0,
+      "test_f1_macro": 1.0,
+      "test_acc_2_symptoms": 0.7229508196721313,
+      "test_acc_3_symptoms": 0.8475409836065573,
+      "test_acc_4_symptoms": 0.9311475409836065,
+      "cv_folds": 5,
+      "cv_accuracy_mean": 1.0,
+      "cv_accuracy_std": 0.0,
+      "cv_acc_3_symptoms_mean": 0.9011475409836065,
+      "cv_acc_3_symptoms_std": 0.028316558154814975
+    }
+  },
+  "keras_dnn": {
+    "accuracy": 0.9836065573770492,
+    "precision": 0.989071038251366,
+    "recall": 0.9836065573770492,
+    "f1": 0.9825136612021859,
+    "f1_macro": 0.9869918699186992,
+    "acc_2_symptoms": 0.7622950819672132,
+    "acc_3_symptoms": 0.8901639344262294,
+    "acc_4_symptoms": 0.960655737704918,
+    "cv_accuracy_mean": 1.0,
+    "cv_accuracy_std": 0.0,
+    "cv_acc_3_symptoms_mean": 0.9406557377049181,
+    "epochs": 38,
+    "train_seconds": 6.8
+  }
+}

@@ -1,0 +1,12 @@
+streamlit>=1.50
+pandas>=2.0
+numpy>=1.26
+scikit-learn>=1.4,<1.11
+matplotlib>=3.8
+cryptography>=42
+xgboost>=2.0   # optional: only used when XGBoost is selected for training
+# Only needed to re-run Notebooks/model_comparison.ipynb (the Keras deep-learning experiment).
+# The app itself does NOT need TensorFlow.
+# tensorflow>=2.16
+# Only needed to run the automated tests:
+# pytest>=8
