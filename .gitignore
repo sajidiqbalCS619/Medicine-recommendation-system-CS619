@@ -1,0 +1,8 @@
+# generated at first run - never commit
+data/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+# auto-rebuilt models (created if a stored model cannot be loaded)
+Models/versions/auto_*.pkl
